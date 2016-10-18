@@ -1,0 +1,44 @@
+{
+  "name": "@riim/react-cellx-todo-app",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack --env.dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Riim/react-cellx-todo-app.git"
+  },
+  "author": "Dmitry Vibe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Riim/react-cellx-todo-app/issues"
+  },
+  "homepage": "https://github.com/Riim/react-cellx-todo-app#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-syntax-decorators": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.16.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "postcss-loader": "^1.0.0",
+    "postcss-nesting": "^2.3.1",
+    "raw-loader": "^0.5.1",
+    "webpack": "^2.1.0-beta.25"
+  },
+  "dependencies": {
+    "cellx": "^1.6.54",
+    "cellx-decorators": "^1.0.5",
+    "cellx-react": "^0.3.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}

@@ -1,0 +1,76 @@
+.todo-view {
+	position: relative;
+	box-sizing: border-box;
+	margin-bottom: 6px;
+	padding: 0 40px 0 15px;
+	width: 100%;
+	border-radius: 3px;
+	background: #f0f0f0;
+	line-height: 41px;
+}
+	.todo-view__cb-done {
+		margin-right: 10px;
+	}
+
+	.todo-view__text {
+	}
+
+	.todo-view__cb-done:checked + .todo-view__text {
+		text-decoration: line-through;
+	}
+
+	.todo-view__btn-remove {
+		position: absolute;
+		top: 0;
+		right: 10px;
+		bottom: 0;
+		margin: auto;
+		padding: 0;
+		width: 29px;
+		height: 29px;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		background: transparent;
+		color: transparent;
+		font-size: 0;
+		cursor: pointer;
+	}
+		.todo-view__btn-remove::before,
+		.todo-view__btn-remove::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			width: 21px;
+			height: 1px;
+			background: #000;
+			content: '';
+			opacity: .4;
+			transform: rotate(45deg);
+		}
+
+		.todo-view__btn-remove::after {
+			transform: rotate(-45deg);
+		}
+
+		.todo-view__btn-remove:hover::before,
+		.todo-view__btn-remove:hover::after,
+		.todo-view__btn-remove:active::before,
+		.todo-view__btn-remove:active::after {
+			opacity: 1;
+		}
+
+	.todo-view__btn-remove:hover {
+		background: rgba(0,0,0,.1);
+	}
+
+	.todo-view__btn-remove:focus {
+		outline: none;
+		border-color: hsl(208,94%,54%);
+	}
+
+	.todo-view__btn-remove:active {
+		background: rgba(0,0,0,.2);
+	}
