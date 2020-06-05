@@ -1,16 +1,17 @@
-import { EventEmitter, cellx } from 'cellx';
-import { observable, computed } from 'cellx-decorators';
+import { EventEmitter, cellx, ObservableList } from 'cellx';
+import { Observable, Computed } from 'cellx-decorators';
 import Todo from './types/Todo';
 
 class Store extends EventEmitter {
-	@observable todos = cellx.list([
+	@Observable todos = new ObservableList([
 		new Todo('Primum', true),
 		new Todo('Secundo'),
 		new Todo('Tertium')
 	]);
 
-	@computed doneTodos = function() {
-		return this.todos.filter(todo => todo.done);
+	@Computed
+	get doneTodos() {
+		return this.todos.filter((todo) => todo.done);
 	};
 }
 

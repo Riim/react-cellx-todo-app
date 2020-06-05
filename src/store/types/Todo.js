@@ -1,9 +1,9 @@
 import { EventEmitter } from 'cellx';
-import { observable } from 'cellx-decorators';
+import { Observable } from 'cellx-decorators';
 
 export default class Todo extends EventEmitter {
-	@observable text = void 0;
-	@observable done = void 0;
+	@Observable text = undefined;
+	@Observable done = undefined;
 
 	constructor(text = '', done = false) {
 		super();
